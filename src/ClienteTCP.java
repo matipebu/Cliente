@@ -17,7 +17,7 @@ public class ClienteTCP {
             ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
-            // Genera un identificador único para el cliente
+            
             String idCliente = "CLIENTE-" + System.currentTimeMillis();
 
             System.out.print("SOY EL " + idCliente + "\nIntroduce identificador a consultar (para salir): ");
@@ -51,7 +51,7 @@ public class ClienteTCP {
 
             System.out.println("Fin de cliente...");
 
-            // Cierra los flujos y el socket
+           
             outputStream.close();
             inputStream.close();
             socket.close();
